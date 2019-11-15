@@ -1,6 +1,7 @@
+
 .content {
     padding: 311px 30px 30px 30px;
-    background: #ffffff;
+    background-image: url("../images/background.png");
 }
 
 .content h1 {

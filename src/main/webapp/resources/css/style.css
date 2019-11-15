@@ -13,10 +13,10 @@ html {
 }
 
 body {
+	/* Background pattern from subtlepatterns.com*/
+	background-image:url("../images/background.png");
 	margin: 0px;
 	font-family: Verdana, sans-serif;
-	color: gray;
-	background: lightgray;
 }
 
 .content .container {
