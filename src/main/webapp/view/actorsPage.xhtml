@@ -7,8 +7,19 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition>
         <h1>Display list of films here</h1>
-<!--        <h:form>-->
-<!--            <h:commandButton value="Click me to view list" action="#{actorBean}"/>-->
-<!--        </h:form>-->
+        <h:dataTable value="#{actorBean.actorList}" var="al">
+            <h:column>
+                <f:facet name="header">
+                    First name
+                </f:facet>
+                #{al.firstName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    Last Name
+                </f:facet>
+                #{al.lastName}
+            </h:column>
+        </h:dataTable>
     </ui:composition>
 </html>
