@@ -6,6 +6,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "actor")
+@NamedQuery(
+        name = "getActors",
+        query = "SELECT a FROM Actor a"
+)
 public class Actor
 {
     @Id
