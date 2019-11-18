@@ -14,10 +14,11 @@ import java.util.Set;
 public class FilmService {
 
     @PersistenceContext(unitName = "UserPersistenceUnit")
-    EntityManager em;
+    private EntityManager em;
 
     public List getFilmList() {
-        return em.createNamedQuery("getFilms", Film.class).getResultList();
+//        return em.createNamedQuery("getFilms", Film.class).getResultList();
+        return em.createQuery("select f from Film f", Film.class).getResultList();
     }
 
     public String requestActors() {

@@ -2,7 +2,6 @@ package com.sparta.mjn.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.time.Year;
 
 @Entity
 @Table(name = "film")
@@ -23,7 +22,7 @@ public class Film {
     private String filmDescription;
 
     @Column(name = "release_year")
-    private Year release_year;
+    private int releaseYear;
 
     @Column(name = "language_id")
     private int languageID;
@@ -76,12 +75,12 @@ public class Film {
         this.filmDescription = filmDescription;
     }
 
-    public Year getRelease_year() {
-        return release_year;
+    public int getReleaseYear() {
+        return releaseYear;
     }
 
-    public void setRelease_year(Year release_year) {
-        this.release_year = release_year;
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
     }
 
     public int getLanguageID() {
