@@ -16,6 +16,11 @@
             LASTNAME:<br/> <h:inputText value="#{userBean.user.lastName}" /> <br />
             PASSWORD:<br/> <h:inputSecret value="#{userBean.user.password}" /> <br />
            <h:commandButton class = "commandButton" value="Submit" action="#{userBean.registerNewUser()}"/>
+
+            Already a user?
+            <div class="goBackURL">
+                <a class="goBackURL" href="login.xhtml">Log in here  </a> <br />
+            </div>
         </h:form>
 
       </ui:define>

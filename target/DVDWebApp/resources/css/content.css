@@ -26,6 +26,14 @@
     border: 5px solid #c8140e;
 }
 
+div.goBackURL {
+    color: rgba(92, 120, 202, 0.78);
+}
+
+.content div.goBackURL {
+    color: rgba(27, 202, 37, 0.78);
+}
+
 .commandButton{
     background: #d9250f;
     width: 8vh;
