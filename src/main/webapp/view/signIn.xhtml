@@ -11,12 +11,12 @@
             <h:form>
                 <h:outputLabel value="Would you like to sign in or do you need to register?" />
                 <p/>
-                <h:selectOneRadio value="#{welcome.path}" layout="pageDirection">
-                    <f:selectItem itemLabel="Register" itemValue="1" />
-                    <f:selectItem itemLabel="Current User" itemValue="2" />
-                </h:selectOneRadio>
+<!--                <h:selectOneRadio value="#{welcome.path}" layout="pageDirection">-->
+<!--                    <f:selectItem itemLabel="Register" itemValue="1" />-->
+<!--                    <f:selectItem itemLabel="Current User" itemValue="2" />-->
+<!--                </h:selectOneRadio>-->
                 <p/>
-                <h:commandButton class = "commandButton" value="Enter" action="#{welcome.nextScreen}"/>
+                <h:commandButton class = "commandButton" value="Enter" action="register"/>
             </h:form>
         </ui:define>
     </ui:composition>
