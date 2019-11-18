@@ -13,7 +13,7 @@ import java.util.List;
 public class FilmBean {
 
     @Inject
-    private FilmService filmService = new FilmService();
+    private FilmService filmService;
 
     private Film film = new Film();
 
@@ -21,7 +21,7 @@ public class FilmBean {
         return filmService.requestActors();
     }
 
-    public List displayFilmDetails() {
+    public List filmList() {
         return filmService.getFilmList();
     }
 
