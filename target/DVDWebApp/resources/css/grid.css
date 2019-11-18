@@ -26,6 +26,10 @@
 
 .container {
 	display: grid;
+<<<<<<< HEAD
+	grid-gap: 15vh;
+=======
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 	grid-template-columns: 1fr 3fr 1fr;
 	grid-template-rows: auto;
 	grid-template-areas:
