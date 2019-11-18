@@ -1,14 +1,16 @@
 package com.sparta.mjn.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.Year;
 
 @Entity
 @Table(name = "film")
+
+@NamedQuery(
+        name = "getFilms",
+        query = "SELECT f FROM Film f"
+)
 public class Film {
     @Id
     @Column(name = "film_id")

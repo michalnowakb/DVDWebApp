@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="jdbc/__mysql" transaction-type="JTA">
+        <!--        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
+        <!--<class>org.kwd.db.Actor</class>-->
+        <jta-data-source>jdbc/__mysql</jta-data-source>
+        <!--        <exclude-unlisted-classes>false</exclude-unlisted-classes>-->
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0"
              xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,3 +24,4 @@
         <jta-data-source>jdbc/__mysql</jta-data-source>
     </persistence-unit>
 </persistence>
+>>>>>>> c3ffff6a46c9dc2bac889701b4bc8adeb7ffa101

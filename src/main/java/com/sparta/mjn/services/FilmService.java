@@ -12,15 +12,19 @@ import java.util.Set;
 @Named
 @Stateless
 public class FilmService {
-    private EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("jdbc/__sakila");
 
-    @PersistenceContext
-    EntityManager entityManager;
+    @PersistenceContext(unitName = "UserPersistenceUnit")
+    EntityManager em;
 
-    public List getFilmDetails(Film film) {
-        Query query = entityManager.createNativeQuery("SELECT f.title, f.rating FROM film f", Film.class);
-        return query.getResultList();
+    public List getFilmList() {
+        return em.createNamedQuery("getFilms", Film.class).getResultList();
     }
+
+    public String requestActors() {
+        return "actors";
+
+
+}
 
 
 //    @ManyToMany

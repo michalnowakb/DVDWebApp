@@ -1,5 +1,9 @@
 package com.sparta.mjn.beans;
 
+import com.sparta.mjn.entities.User;
+import com.sparta.mjn.services.LoginService;
+import com.sparta.mjn.services.RegistrationService;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
