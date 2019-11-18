@@ -1,13 +1,15 @@
 package com.sparta.mjn.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "actor")
+@NamedQuery(
+        name = "getActors",
+        query = "SELECT a FROM Actor a"
+)
 public class Actor
 {
     @Id
@@ -22,6 +24,13 @@ public class Actor
 
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
+    @ManyToMany
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "actor_id"),
+            inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "film_id"))
+    private List<Film> filmList;
 
     public int getActorID() {
         return actorID;
@@ -49,6 +58,14 @@ public class Actor
 
     public LocalDateTime getLastUpdate() {
         return lastUpdate;
+    }
+
+    public List<Film> getFilmList() {
+        return filmList;
+    }
+
+    public void setFilmList(List<Film> filmList) {
+        this.filmList = filmList;
     }
 
     public void setLastUpdate(LocalDateTime lastUpdate) {
