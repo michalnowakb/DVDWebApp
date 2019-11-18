@@ -14,7 +14,7 @@
                 <h:form>
                    USERNAME:  <h:inputText value="#{userBean.user.userName}"/> <br />
                    PASSWORD: <h:inputSecret value="#{userBean.user.password}" /> <br />
-                    <h:commandButton value="Submit" action="#{userBean.validateUser()}"/>
+                    <h:commandButton class = "commandButton" value="Submit" action="#{userBean.validateUser()}"/>
                 </h:form>
             </ui:define>
         </ui:composition>

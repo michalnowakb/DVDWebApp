@@ -15,7 +15,7 @@
             FIRSTNAME:<br/> <h:inputText value="#{userBean.user.firstName}" /> <br />
             LASTNAME:<br/> <h:inputText value="#{userBean.user.lastName}" /> <br />
             PASSWORD:<br/> <h:inputSecret value="#{userBean.user.password}" /> <br />
-           <h:commandButton value="Submit" action="#{userBean.registerNewUser()}"/>
+           <h:commandButton class = "commandButton" value="Submit" action="#{userBean.registerNewUser()}"/>
         </h:form>
 
       </ui:define>

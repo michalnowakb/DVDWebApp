@@ -7,7 +7,9 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <h:outputStylesheet name="style.css" library="css"/>
-        <title>Trainee Project</title>
+        <h:outputStylesheet library="webjars" name="font-awesome/4.7.0/css/font-awesome.min-jsf.css" />
+
+        <title>Filme Web Application</title>
     </h:head>
 
     <h:body>
@@ -15,6 +17,12 @@
             <div class="header">
                 <ui:insert name="header">
                     <ui:include src="headerTemplate.xhtml"/>
+                </ui:insert>
+            </div>
+
+            <div class="navbar">
+                <ui:insert name="navbar">
+                    <ui:include src="navBarTemplate.xhtml"/>
                 </ui:insert>
             </div>
 

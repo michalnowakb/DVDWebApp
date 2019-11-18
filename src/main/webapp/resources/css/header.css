@@ -1,14 +1,15 @@
 
+
 .header {
     width: 100%;
     position: fixed;
     z-index: 100;
     top: 0px;
     left: 0px;
-    background-color: #ffffff;
+    background-color: #d9250f;
     border-style: solid;
-    border-color: #d91e4f;
-    border-width: 0px 0px 1px 0px;
+    border-color: #c8140e;
+    border-width: 0px 0px 3px 0px;
 }
 
 .header h1 {

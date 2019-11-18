@@ -1,17 +1,37 @@
-body{
-    /* Background pattern from subtlepatterns.com*/
-    background-image:url("../images/background.png");
-}
+
 .content {
     padding: 311px 30px 30px 30px;
-    background-image: url("../images/background.png");
+    display: inline-block;
+    margin-bottom: 5vh;
 }
 
 .content h1 {
     padding: 10px;
+    position: absolute;
+    top: 28%;
+    right: 30%;
 }
 
 .content form {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: auto;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    background: #e9261f;
+    top: 40%;
+    right: 35%;
+    width: 60vh;
+    height: 30vh;
+    border: 5px solid #c8140e;
+}
+
+.commandButton{
+    background: #d9250f;
+    width: 8vh;
+    height: 3.3vh;
+    cursor: pointer;
+}
+.commandButton:hover{
+     background: #c8140e;
 }

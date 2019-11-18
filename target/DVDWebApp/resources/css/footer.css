@@ -1,11 +1,12 @@
 .footer {
-    background-color: #d91e4f;
+    background-color: #d9250f;
 }
 
-.footer h1 {
+.footer h3 {
+    font-size: 14px;
     padding: 10px;
-    color: #ffffff;
+    color: #000000;
 
-    margin: 0px;
+    margin: 2px;
     text-align: center;
 }

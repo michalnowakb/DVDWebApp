@@ -1,7 +1,4 @@
-body{
-	/* Background pattern from subtlepatterns.com*/
-	background-image: url("../images/background.png");
-}
+
 .menu {
 	position: fixed;
 	top: 0px;

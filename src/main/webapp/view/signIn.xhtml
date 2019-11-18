@@ -10,7 +10,6 @@
     <ui:define name="content">
         <h1>The Sparta Training application</h1>
         <p/>
-        <h2>Welcome</h2>
         <h:form>
             <h:outputLabel value="Would you like to sign in or do you need to register?" />
             <p/>
@@ -19,7 +18,7 @@
                 <f:selectItem itemLabel="Current User" itemValue="2" />
             </h:selectOneRadio>
             <p/>
-            <h:commandButton value="Enter" action="#{welcome.nextScreen}"/>
+            <h:commandButton class = "commandButton" value="Enter" action="#{welcome.nextScreen}"/>
         </h:form>
     </ui:define>
 </ui:composition>
