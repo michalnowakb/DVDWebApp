@@ -17,12 +17,12 @@ public class FilmBean {
 
     private Film film = new Film();
 
-    public Film getFilm() {
-        return film;
+    public String getActors() {
+        return filmService.requestActors();
     }
 
     public List displayFilmDetails() {
-        return filmService.getFilmDetails(film);
+        return filmService.getFilmList();
     }
 
 
