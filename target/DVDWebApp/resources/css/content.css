@@ -1,13 +1,49 @@
+<<<<<<< HEAD
+
+.content {
+    padding: 311px 30px 30px 30px;
+    display: inline-block;
+    margin-bottom: 5vh;
+=======
 .content {
     padding: 311px 30px 30px 30px;
     background: #ffffff;
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 }
 
 .content h1 {
     padding: 10px;
+<<<<<<< HEAD
+    position: absolute;
+    top: 28%;
+    right: 30%;
+=======
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 }
 
 .content form {
     margin-right: auto;
     margin-left: auto;
+<<<<<<< HEAD
+    margin-bottom: auto;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    background: #e9261f;
+    top: 40%;
+    right: 35%;
+    width: 60vh;
+    height: 30vh;
+    border: 5px solid #c8140e;
+}
+
+.commandButton{
+    background: #d9250f;
+    width: 8vh;
+    height: 3.3vh;
+    cursor: pointer;
+}
+.commandButton:hover{
+     background: #c8140e;
+=======
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 }

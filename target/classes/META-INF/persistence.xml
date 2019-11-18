@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -14,3 +15,13 @@
     </persistence-unit>
 
 </persistence>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="UserPersistenceUnit" transaction-type="JTA">
+        <jta-data-source>jdbc/__mysql</jta-data-source>
+    </persistence-unit>
+</persistence>
+>>>>>>> c3ffff6a46c9dc2bac889701b4bc8adeb7ffa101

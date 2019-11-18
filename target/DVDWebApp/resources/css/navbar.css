@@ -1,0 +1,30 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.social {
+    position: fixed;
+    top: 35%;
+}
+
+.social ul{
+    padding: 0px;
+    transform: translate(-270px,0);
+}
+
+.social ul li{
+    display: block;
+    margin: 5px;
+    background: rgba(0,0,0,0.5);
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 0 30px 30px 0;
+    transition: all 1s;
+}
+
+.social ul li:hover{
+    transform: translate(110px, 0);
+    background: #c8140e;
+}

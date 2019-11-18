@@ -1,4 +1,15 @@
 .footer {
+<<<<<<< HEAD
+    background-color: #d9250f;
+}
+
+.footer h3 {
+    font-size: 14px;
+    padding: 10px;
+    color: #000000;
+
+    margin: 2px;
+=======
     background-color: #d91e4f;
 }
 
@@ -7,5 +18,6 @@
     color: #ffffff;
 
     margin: 0px;
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
     text-align: center;
 }

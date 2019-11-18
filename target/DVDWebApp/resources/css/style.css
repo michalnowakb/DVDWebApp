@@ -1,4 +1,8 @@
 @IMPORT url("#{resource['css:content.css']}");
+<<<<<<< HEAD
+@IMPORT url("#{resource['css:navbar.css']}");
+=======
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 @IMPORT url("#{resource['css:header.css']}");
 @IMPORT url("#{resource['css:footer.css']}");
 @IMPORT url("#{resource['css:grid.css']}");
@@ -13,10 +17,19 @@ html {
 }
 
 body {
+<<<<<<< HEAD
+	/* Background pattern from subtlepatterns.com*/
+	background: url("#{resource['images/background.png']}");
+	/*background-color: #d91e4f;*/
+	/*background: black;*/
+	margin: 0px;
+	font-family: Verdana, sans-serif;
+=======
 	margin: 0px;
 	font-family: Verdana, sans-serif;
 	color: gray;
 	background: lightgray;
+>>>>>>> cb756722f8d44d73f2b419737bf454a0d9fb1b96
 }
 
 .content .container {

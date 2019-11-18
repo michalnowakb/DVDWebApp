@@ -4,6 +4,7 @@ import com.sparta.mjn.entities.Film;
 import com.sparta.mjn.services.FilmService;
 
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @RequestScoped
 public class FilmBean {
 
+    @Inject
     private FilmService filmService = new FilmService();
 
     private Film film = new Film();
