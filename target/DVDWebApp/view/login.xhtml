@@ -12,8 +12,9 @@
 
         <h1>The Web App - Login page</h1>
                 <h:form>
-                   USERNAME:  <h:inputText value="#{userBean.user.userName}"/> <br />
+                   USERNAME:  <h:inputText value="#{userBean.user.username}"/> <br />
                    PASSWORD: <h:inputSecret value="#{userBean.user.password}" /> <br />
+                    New user? <a class="goBackURL" href="http://localhost:8080/DVDWebApp/view/register.xhtml">Register here  </a> <br />
                     <h:commandButton class = "commandButton" value="Submit" action="#{userBean.validateUser()}"/>
                 </h:form>
             </ui:define>
