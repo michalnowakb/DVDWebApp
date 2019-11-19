@@ -17,22 +17,13 @@ public class FilmService {
     private EntityManager em;
 
     public List getFilmList() {
-//        return em.createNamedQuery("getFilms", Film.class).getResultList();
         return em.createQuery("select f from Film f", Film.class).getResultList();
     }
 
     public String requestActors() {
         return "actors";
+    }
 
 
-}
-
-
-//    @ManyToMany
-//    @JoinTable(
-//            name = "film",
-//            joinColumns = @JoinColumn(name = "film_id"),
-//            inverseJoinColumns = @JoinColumn(name = "actor_id"))
-//    Set<Film> filmCast;
 
 }

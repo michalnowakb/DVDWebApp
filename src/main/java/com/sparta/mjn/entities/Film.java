@@ -2,6 +2,7 @@ package com.sparta.mjn.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "film")
@@ -50,6 +51,14 @@ public class Film {
 
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
+//    @ManyToMany(mappedBy = "film")
+//    private Set<Actor> actorList;
+//
+//    public Set<Actor> getActorList() {
+//        return actorList;
+//    }
+
 
     public int getFilmID() {
         return filmID;
