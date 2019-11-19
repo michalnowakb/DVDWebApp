@@ -7,6 +7,7 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.Collection;
 
 @Named
 @RequestScoped
@@ -18,8 +19,27 @@ public class RegistrationService
     @Transactional
     public String registerUser(User user)
     {
+        if(isAlreadyAUser(user))
+        {
+            return "register";
+        }
+        else
+        {
         entityManager.persist(user);
         return "login";
+        }
+    }
+
+    private boolean isAlreadyAUser(User user)
+    {
+        Collection entityHolder = entityManager.createQuery(
+                "SELECT u FROM User u WHERE u.username LIKE :userName AND u.password LIKE :password")
+                .setParameter("userName", user.getUsername())
+                .setParameter("password", user.getPassword())
+                .getResultList();
+
+        if(!entityHolder.isEmpty()) { return true; }
+        else {return false ;}
     }
 }
 
