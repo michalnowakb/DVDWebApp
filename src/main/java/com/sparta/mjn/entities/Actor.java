@@ -2,7 +2,7 @@ package com.sparta.mjn.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "actor")
@@ -30,7 +30,7 @@ public class Actor
             name = "film_actor",
             joinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "actor_id"),
             inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "film_id"))
-    private List<Film> filmList;
+    private Set<Film> filmList;
 
     public int getActorID() {
         return actorID;
@@ -60,11 +60,11 @@ public class Actor
         return lastUpdate;
     }
 
-    public List<Film> getFilmList() {
+    public Set<Film> getFilmList() {
         return filmList;
     }
 
-    public void setFilmList(List<Film> filmList) {
+    public void setFilmList(Set<Film> filmList) {
         this.filmList = filmList;
     }
 
