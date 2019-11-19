@@ -25,11 +25,11 @@ public class FilmService {
     }
 
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "film",
-//            joinColumns = @JoinColumn(name = "film_id"),
-//            inverseJoinColumns = @JoinColumn(name = "actor_id"))
-//    Set<Film> filmCast;
+    @ManyToMany
+    @JoinTable(
+            name = "film",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id"))
+    Set<Film> filmCast;
 
 }
