@@ -15,7 +15,7 @@ html {
 
 body {
 	/* Background pattern from subtlepatterns.com*/
-	background: url("#{resource['images/keith.png']}");
+	background: url("#{resource['images/background.png']}");
 	/*background-color: #d91e4f;*/
 	/*background: black;*/
 	margin: 0px;
