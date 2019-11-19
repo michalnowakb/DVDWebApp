@@ -20,7 +20,7 @@ public class LoginService
                 .setParameter("password", user.getPassword())
                 .getResultList();
 
-        if(!entityHolder.isEmpty()) { return "welcome"; }
+        if(!entityHolder.isEmpty()) { return "main"; }
 
         return "login";
     }
