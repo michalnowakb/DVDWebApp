@@ -11,9 +11,14 @@
         <ui:define name="content">
             <h1>The Sparta Training application</h1>
             <p/>
+            <h:form>
+                <h:link value="Search by Actor" outcome="actorListPage" />
+            </h:form>
 
-            <h:link value="Search by Actor" outcome="actorListPage" />
-            <h:link value="Search by Film" outcome="filmListPage" />
+           <p/>
+            <h:form>
+                <h:link value="Search by Film" outcome="filmListPage" />
+            </h:form>
             
         </ui:define>
     </ui:composition>
