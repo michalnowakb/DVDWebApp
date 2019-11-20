@@ -10,6 +10,6 @@
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/META-INF/persistence.xml" />
       </configuration>
-    </facet>
+    </facet> 
   </component>
 </module>
