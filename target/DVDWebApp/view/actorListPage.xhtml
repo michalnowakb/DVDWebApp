@@ -7,14 +7,19 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <ui:composition template="/WEB-INF/templates/template.xhtml">
         <ui:define name="content">
-            <h:dataTable value="#{actorBean.actorList}" var="al">
-                <h:column>
-                    <f:facet name="header">
-                        Actors:
-                    </f:facet>
-                    <h:link value="#{al.lastName} , #{al.firstName}" outcome="signIn"/>
-                </h:column>
-            </h:dataTable>
+            <h:form>
+                <h:dataTable value="#{actorBean.actorList()}" var="al">
+                    <h:column>
+                        <f:facet name="header">
+                            Actors name:
+                        </f:facet>
+                        #{al.lastName} , #{al.firstName}
+                    </h:column>
+                    <h:column>
+                        <h:commandLink value="Get List of films" action="#{actorBean.showActorFilmListPage(al.actorID)}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
         </ui:define>
     </ui:composition>
 </html>

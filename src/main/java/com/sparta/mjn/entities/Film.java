@@ -2,6 +2,8 @@ package com.sparta.mjn.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "film")
@@ -50,6 +52,9 @@ public class Film {
 
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
+    @ManyToMany(mappedBy = "films")
+    Set<Actor> actors = new HashSet<>();
 
     public int getFilmID() {
         return filmID;

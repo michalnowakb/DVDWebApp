@@ -6,9 +6,9 @@ import java.util.List;
 
 @Entity
 @Table(name = "actor")
-@NamedQuery(
-        name = "getActors",
-        query = "SELECT a FROM Actor a"
+@NamedQueries(
+        @NamedQuery(name = "getActors",
+                    query = "SELECT a FROM Actor a")
 )
 public class Actor
 {
@@ -29,8 +29,9 @@ public class Actor
     @JoinTable(
             name = "film_actor",
             joinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "actor_id"),
-            inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "film_id"))
-    private List<Film> filmList;
+            inverseJoinColumns = @JoinColumn(name = "film_id", referencedColumnName = "film_id")
+    )
+    private List<Film> films;
 
     public int getActorID() {
         return actorID;
@@ -60,12 +61,12 @@ public class Actor
         return lastUpdate;
     }
 
-    public List<Film> getFilmList() {
-        return filmList;
+    public List<Film> getFilms() {
+        return films;
     }
 
-    public void setFilmList(List<Film> filmList) {
-        this.filmList = filmList;
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 
     public void setLastUpdate(LocalDateTime lastUpdate) {
