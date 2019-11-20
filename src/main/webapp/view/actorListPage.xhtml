@@ -5,16 +5,21 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <ui:composition template="/WEB-INF/templates/template.xhtml">
-        <ui:define name="content">
-            <h:dataTable value="#{actorBean.actorList}" var="al">
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <h:dataTable value="#{actorBean.actorList()}" var="al">
                 <h:column>
                     <f:facet name="header">
-                        Actors:
+                        Actors name:
                     </f:facet>
-                    <h:link value="#{al.lastName} , #{al.firstName}" outcome="actorFilmsPage"/>
+                    #{al.lastName} , #{al.firstName}
+                </h:column>
+                <h:column>
+                    <h:commandLink value="Get List of films" action="#{actorBean.showActorFilmListPage(al.actorID)}"/>
                 </h:column>
             </h:dataTable>
-        </ui:define>
-    </ui:composition>
+        </h:form>
+    </ui:define>
+</ui:composition>
 </html>
