@@ -7,15 +7,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <ui:composition template="/WEB-INF/templates/template.xhtml">
     <ui:define name="content">
-        <h:dataTable value="#{filmBean.filmList()}" var="fl">
+        <h:dataTable value="#{filmBean.filmCast()}" var="fc">
             <h:column>
                 <f:facet name="header">
-                    Films:
+                    Cast:
                 </f:facet>
-                <h:link value="#{fl.filmTitle}, #{fl.releaseYear}, #{fl.filmRating}" outcome=""/>
-            </h:column>
-            <h:column>
-                <h:commandLink value="Get Cast" action="#{filmBean.showFilmCastListPage(fc.filmID)}"/>
+                <h:link value="#{fc.firstName},#{fc.lastName}" outcome=""/>
             </h:column>
         </h:dataTable>
     </ui:define>

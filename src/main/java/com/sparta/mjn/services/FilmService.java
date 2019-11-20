@@ -1,6 +1,7 @@
 package com.sparta.mjn.services;
 
 
+import com.sparta.mjn.entities.Actor;
 import com.sparta.mjn.entities.Film;
 
 import javax.ejb.Stateless;
@@ -16,14 +17,17 @@ public class FilmService {
     @PersistenceContext(unitName = "UserPersistenceUnit")
     private EntityManager em;
 
-    public List getFilmList() {
-        return em.createQuery("select f from Film f", Film.class).getResultList();
+    public List<Film> getFilmList()
+    {
+        return em.createNamedQuery("getFilms", Film.class).getResultList();
     }
 
-    public String requestActors() {
-        return "actors";
+    public List<Actor> getActorList(int filmId) {
+        Query query = em.createQuery("SELECT f.actorList FROM Film f WHERE f.filmID = :fI");
+        return query.setParameter("fI",filmId).getResultList();
     }
 
-
-
+    public Film getFilmById(int filmId) {
+        return em.find(Film.class, filmId);
+    }
 }

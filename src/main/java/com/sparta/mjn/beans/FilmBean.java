@@ -17,17 +17,19 @@ public class FilmBean {
 
     @Inject
     private FilmService filmService;
+    private int entityFilmId;
+    private Film filmEntity;
+//    private Film film = new Film();
 
-    private Film film = new Film();
-
-    public String getActors() {
-        return filmService.requestActors();
-    }
-
-    public List filmList() {
+    public List<Film> filmList() {
         return filmService.getFilmList();
     }
 
+    public String showFilmCastListPage(int filmId) {
+        entityFilmId = filmId;
+        filmEntity = filmService.getFilmById(entityFilmId);
+        return "filmActorsPage";
+    }
 
     @ManyToMany(mappedBy = "film")
     private Set<Actor> actorList;
@@ -36,4 +38,8 @@ public class FilmBean {
         return actorList;
     }
 
+    public List<Actor> filmCast()
+    {
+        return filmService.getActorList(entityFilmId);
+    }
 }

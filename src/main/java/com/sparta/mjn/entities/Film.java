@@ -52,12 +52,12 @@ public class Film {
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
 
-//    @ManyToMany(mappedBy = "film")
-//    private Set<Actor> actorList;
-//
-//    public Set<Actor> getActorList() {
-//        return actorList;
-//    }
+    @ManyToMany(mappedBy = "films")
+    private Set<Actor> actorList;
+
+    public Set<Actor> getActorList() {
+        return actorList;
+    }
 
 
     public int getFilmID() {
