@@ -17,13 +17,11 @@
     margin-left: auto;
     margin-bottom: auto;
     padding: 10px 10px 10px 10px;
-    position: absolute;
     background: #e9261f;
     top: 40%;
     right: 35%;
-    width: 60vh;
-    height: 30vh;
     border: 5px solid #c8140e;
+    display: inline-block;
 }
 
 div.goBackURL {
